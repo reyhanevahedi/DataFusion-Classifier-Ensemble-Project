@@ -1,0 +1,36 @@
+The source codes from SynthEnsemble paper(referenced as [3] in the Project Report)
+have been used in the conduction of our innovative fusion methods. 
+
+Training:
+The single models have been trained by Ashraf et al. and the training process
+of each can be found in: https://github.com/syednabilashraf/SynthEnsemble/tree/main/training
+Ashraf et al. have included each trained model's output, and their regarding
+parameters, as attachments to each individual Kaggle notebook, which can then
+be transferred to our fusion appraches' codes.  
+
+Testing:
+The testing stage of [3] includes two different fusion methods, using the training
+outputs, and can be found at: https://github.com/syednabilashraf/SynthEnsemble/tree/main/testing
+
+Code Alterations (regarding my project report):
+For this project, as per discussed in the report, I did not run the training 
+of each individual model since the trained models were available.
+ 
+A) For conducting new fusion methods, I used the code at https://github.com/syednabilashraf/SynthEnsemble/blob/main/testing/average_weighted_ensemble.md
+and changed it to induce an exhaustive search for the best permutation of 
+base classifiers, fused with simple same-weighted(or unweighted) averaging of 
+decisions. Since all pretrained models and their parameters were available in
+Kaggle notebooks, all changes were enforced in the same Kaggle notebooks as
+in order to refrain from having to download all the data.
+I have just included my own changes to this code as a .py script titled:
+"added_to_test_all_nofinding_stage_2_kagglenotebook.py"
+
+
+B) Also, for enforcing weights on the best chosen permutation of unweighted 
+classifiers in the simple averaging fusion, I again employed an exhaustive
+search for the best array of weights (with regards to the conditions of sum
+of weights, and number of classifiers). And also a DE approach to weight
+optimization. While both these changes were executed in Kaggle, the stand-alone
+script for these changes is attached under the name:
+"added_to_valid_preds_+_optimal_weight_finder__kagglenotebook.py" 
+ 
